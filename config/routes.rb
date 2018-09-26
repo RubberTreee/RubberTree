@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/', to: 'prospects#home', as: 'home'
+  get '/register', to: 'prospects#home'
+  get '/register/new', to: 'prospects#new', as: 'new_registration'
+  post '/register', to: 'prospects#create', as: 'register_prospect'
 end

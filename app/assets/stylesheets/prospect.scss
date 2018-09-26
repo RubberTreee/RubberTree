@@ -1,0 +1,37 @@
+.welcome {
+  padding: 70px 0;
+  margin: auto;
+  width: 50%;
+}
+
+a.welcome.register {
+  margin-left: 21%;
+}
+
+.register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  /* this is half the height of your div*/
+  margin-left: -100px;
+  /*this is half of width of your div*/
+}
+
+#new_prospect {
+  display: grid;
+}
+
+.field_with_errors input {
+  border: 1px solid #e62a2a;
+}
+
+.register.thanks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  /* this is half the height of your div*/
+  margin-left: -100px;
+  /*this is half of width of your div*/
+}

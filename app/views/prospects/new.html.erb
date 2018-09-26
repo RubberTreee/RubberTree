@@ -1,0 +1,27 @@
+<section class='register'>
+  <h1>Personal Details</h1>
+    <%= form_for @prospect, url: register_prospect_path do |f| %>
+      <% if @prospect.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@prospect.errors.count, "error") %> stopped your regisration from being successful:
+          </h2>
+          <ul>
+          <% @prospect.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.text_field :first_name, size: 42, placeholder: 'First name' %>
+      <%= f.text_field :last_name, size: 42, placeholder: 'Last name' %>
+      <%= f.text_field :email, size: 42, placeholder: 'Email' %>
+      <%= f.text_field :mobile, size: 42, placeholder: 'Mobile' %>
+      <%= f.text_field :how_heard, size: 42, placeholder: 'How did you hear about us?' %>
+      <%= f.label      :marketing do %>
+        Can we contact you in the future?
+        <%= f.check_box  :marketing %>
+        <%= f.submit 'Submit' %>
+      <% end %>
+  <%end%>
+</section>
