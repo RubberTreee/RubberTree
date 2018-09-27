@@ -11,6 +11,7 @@ class ProspectsController < ApplicationController
     respond_to do |format|
       if @prospect.save
         format.html { render :thanks }
+        RegistrationMailer.welcome(@prospect).deliver_now
       else
         format.html { render :new, notice: @prospect.errors }
       end
